@@ -20,7 +20,10 @@ let package = Package(
         .target(
             name: "WebRTCiOSSDK",
             dependencies: ["Starscream"],
-            path: "WebRTCiOSSDK"
+            path: "WebRTCiOSSDK",
+	    exclude: [ // Exclude files you removed
+                "Resources/"
+            ]
         ),
         .binaryTarget(
             name: "WebRTC",
