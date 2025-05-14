@@ -28,7 +28,8 @@ let package = Package(
 		"WebRTC-Sample-App/",
 		"WebRTC-Sample-AppTests/",
 		"WebRTC-Sample-AppUITests/",
-		"WebRTCiOSSDKTests/"
+		"WebRTCiOSSDKTests/",
+		"WebRTCiOSSDK/"
             ]
         ),
         .binaryTarget(
