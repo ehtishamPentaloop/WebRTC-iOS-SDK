@@ -22,7 +22,13 @@ let package = Package(
             dependencies: ["Starscream"],
             path: "WebRTCiOSSDK",
 	    exclude: [ // Exclude files you removed
-                "Resources/"
+                "Resources/",
+		"ScreenShare/",
+		"webrtc_framework/",
+		"WebRTC-Sample-App/",
+		"WebRTC-Sample-AppTests/",
+		"WebRTC-Sample-AppUITests/",
+		"WebRTCiOSSDKTests/"
             ]
         ),
         .binaryTarget(
