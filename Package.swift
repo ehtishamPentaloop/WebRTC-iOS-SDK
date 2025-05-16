@@ -9,28 +9,13 @@ let package = Package(
     products: [
         .library(
             name: "WebRTCiOSSDK",
-            targets: ["WebRTCiOSSDK", "WebRTC"]
+            targets: ["WebRTC"]
         ),
     ],
     dependencies: [
-        // No external dependencies now
+        // No dependencies
     ],
     targets: [
-        .target(
-            name: "WebRTCiOSSDK",
-            dependencies: [],
-            path: "WebRTCiOSSDK",
-            exclude: [
-                "Resources/",
-                "ScreenShare/",
-                "webrtc_framework/",
-                "WebRTC-Sample-App/",
-                "WebRTC-Sample-AppTests/",
-                "WebRTC-Sample-AppUITests/",
-                "WebRTCiOSSDKTests/",
-		"WebRTCiOSSDK/api"
-            ]
-        ),
         .binaryTarget(
             name: "WebRTC",
             path: "WebRTC.xcframework"
