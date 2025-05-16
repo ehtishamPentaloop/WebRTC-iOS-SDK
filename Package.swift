@@ -13,21 +13,22 @@ let package = Package(
         ),
     ],
     dependencies: [
-        // No external dependencies now
+            .package(url: "https://github.com/daltoniam/Starscream.git", from: "4.0.6")
+
     ],
     targets: [
         .target(
             name: "WebRTCiOSSDK",
-            dependencies: [],
+            dependencies: ["Starscream"],
             path: "WebRTCiOSSDK",
-            exclude: [
+	    exclude: [ // Exclude files you removed
                 "Resources/",
-                "ScreenShare/",
-                "webrtc_framework/",
-                "WebRTC-Sample-App/",
-                "WebRTC-Sample-AppTests/",
-                "WebRTC-Sample-AppUITests/",
-                "WebRTCiOSSDKTests/"
+		"ScreenShare/",
+		"webrtc_framework/",
+		"WebRTC-Sample-App/",
+		"WebRTC-Sample-AppTests/",
+		"WebRTC-Sample-AppUITests/",
+		"WebRTCiOSSDKTests/"
             ]
         ),
         .binaryTarget(
